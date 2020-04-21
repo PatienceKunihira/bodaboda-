@@ -1,0 +1,57 @@
+body{
+    border: 1px;
+    margin: 1px;
+    padding: 2px;
+    background-color: #cceeb9;
+}
+.customer_form{
+    margin: 50px 200px;
+
+}
+.text-center {
+    padding-top: 15px;
+     margin-top:1rem;
+}
+
+#div1{
+    margin-left: 500px; 
+    margin-top: 100px;
+
+}
+.form-control{
+    width: 200px;
+    display: inline-block;
+    flex-direction: row;
+}
+.container{
+    border: 2px solid;
+    border-radius: 5px;
+}
+.body2 {
+    background-color:whitesmoke;
+    margin-top: 30px;
+  }
+.form2{
+    
+    background-color:rgba(245, 245, 245, 0.87);
+    
+}
+.container-fluid{
+    padding-left: 204px;
+    padding-right: 97px;
+    padding-top: 50px;
+    max-width: 800px;
+}
+fieldset{
+    border: 1px solid black;
+    border-radius: 2px;
+    
+}
+legend{
+    width: 26%;
+}
+#formBorder{
+    margin-top: 10px;
+}
+ 
+   

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../boda.css"/>
+    
+  
+    <title>Customer info</title>
+  </head>
+  <body >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">BODABODA BANJA </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Sign in <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <h2 style="text-align: center;"  >Customer Registration Form</h2>
+   <div >
+    <form id="formBorder" action="/user/customerhome" method="POST" class="customer_form" onsubmit="return cust_validation();" name="customer">
+    <div class="divBody">
+       <fieldset >
+          <legend>Personal information</legend>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="name">First name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fnameid"
+                placeholder="First name"
+                name="firstname"
+               style="margin-left: 26px;"
+               
+              />
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="name">Surname</label>
+              <input
+                type="text"
+                class="form-control"
+                id="snameid"
+                placeholder="Surname"         
+                name="surname"
+                style="margin-left: 20px;"
+                
+              />
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="name">Other name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="othername"
+                placeholder="othernames"
+                name="othername"
+               
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4" >
+              <label for="name">Phone contact </label>
+              <input
+                type="number"
+                class="form-control"
+                id="phoneid"
+                placeholder="07.."               
+                name="phonecontact"
+                
+              />
+            </div>
+
+            <div class="form-group col-md-4" >
+              <label for="name">Current date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dateid"
+                placeholder="dd/mm/yy"
+                name="currentdate"               
+                style="margin-right: 10px;"
+                
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4" >
+              <label for="name">Nationality</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nationality"
+                placeholder="Nationality"
+                name="nationality"
+                style="margin-left: 25px;"
+                
+              />
+            </div>
+
+            <div class="form-group col-md-4" >
+              <label for="name">NIN</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nin"
+                placeholder="nin"               
+                name="nin"
+                style="margin-left: 59px;"
+                
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-4" >
+              <label for="birthday">Birthday</label>
+            <input 
+              type="date"
+              class="form-control"
+              id="" 
+              placeholder=""
+              name="birthday"
+              style="margin-left: 40px;"
+              
+               />
+              </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-4" >
+              <label for="name">Marital status</label>
+              <select name="maritalstatus" class="form-control" >
+                 <option value>--Select--</option> 
+                <option value>Married</option>
+                <option value>Single</option>
+                <option value>Divorced</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend>Referee's details</legend>
+          <div class="form-row">
+            <div class="form-group  col-md-4">
+              <label for="name"> Referee's first name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="rfnameid"
+                placeholder="First name"               
+                name="refree_fname"
+                
+              />
+            </div>
+
+            <div class="form-group col-md-4" >
+              <label for="name">Referee'surname</label>
+              <input
+                type="text"
+                class="form-control"
+                id="rsnameid"
+                placeholder="Surname"
+                
+                name="refree_sname"
+              />
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="name"> Refree's othername</label>
+              <input
+                type="text"
+                class="form-control"                
+                placeholder="othername"              
+                name="refree_oname"
+               
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="name"> Referee's contact</label>
+              <input
+                type="number"
+                class="form-control"
+                id="fnameid"
+                placeholder="07..."                
+                name="refree_number"
+                style="margin-right: 50px;"
+               
+              />
+            </div>
+
+            <div class="form-group col-md-4" >
+              <label for="name">Referee's Date of birth</label>
+              <input
+                type="date"
+                class="form-control"
+                id="DOB"
+                placeholder=""                
+                name="refree_dob"
+                
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-4" >
+              <label for="work">Referee's work</label>
+              <input
+               type="text"
+                class="form-control" 
+                id="work"                  
+                 name="refree_work"
+                 style="margin-right: 90px;"
+                 
+                 />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend>Loan Requirements</legend>
+          <div class="form-row">
+            <div class="form-group col-md-4" >
+              <label for="name">LC1</label>
+              <input 
+              type="text"
+               class="form-control"
+                id="lc1" 
+                
+                name="LC1"
+                />
+            </div>
+
+            <div class="form-group col-md-4" >
+              <label for="name"> LC3</label>
+              <input type="text" 
+              class="form-control" 
+              id="lc3"
+               
+               name="LC3"
+                />
+            </div>
+          </div>
+          <div class="form- row">
+            <div class="form-group col-md-4" >
+              <label for="name">Kind of vehicle you require</label>
+             <select name="vehicle" class="form-control">
+               <option value="">Bodaboda</option>
+               <option value="">Tukutuku</option>
+               <option value="">Bicycle</option>
+             </select>
+            </div>
+          
+            <div class="form-group col-md-4" >
+              <label for="name">Stage name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="stage"
+                placeholder="Stage name"                
+                name="stage"
+                style="margin-left: 20px;"
+              />
+            </div>
+          </div>
+         
+        <div class="form- row">
+            <div class="form-group col-md-4" >
+              <label for="name">Required Documents</label>
+              <select name="documents" class="form-control">
+                <option value="" >National ID</option>
+                <option value="">Passport</option>
+                <option value="">Birth certificate</option>
+              </select>
+            </div>
+            
+              <div class="form-group col-md-4" >
+                <label for="name">Otherloans</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="loans"
+                  placeholder="Incase of any"                  
+                  name="otherloans"
+                  style="margin-right: 40px;"
+                />
+              </div>
+          
+              <div class="form-group col-md-4" >
+                <label for="name">Down payment</label>
+                <input type="number" 
+                class="form-control" 
+                id="loans"                 
+                 name="downpay"
+                 placeholder="0"
+                  />
+              </div>
+           </div>
+            <div >
+           <input type="submit" class="btn btn-success" value="SUBMIT">
+           <input type="reset" class="btn btn-danger" value="CANCEL">
+          </div>
+                  </fieldset>
+                    
+    </div>            
+        
+        
+      
+        <footer class="page-footer font-small special-color-dark pt-4">
+            <div class="footer-copyright text-center py-3">Bodaboda © 2020 Copyright
+                </div>
+        </footer>
+
+      </form>
+
+      
+    </div>
+    <script src="../js/customers.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.salesform{
+    margin: 50px 300px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    background-color: white;
+    padding-left: 180px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+body{
+    border: 1px;
+    margin: 1px;
+    background-color: #cceeb9;
+}

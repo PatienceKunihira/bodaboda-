@@ -1,0 +1,40 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        title List of customers
+    body(style='background-color:#cceeb9')
+        h2 Welcome.
+        div.form-row
+            div   
+                form.search(action='/customerlist')
+                    div.form-row
+                        div.col-md-8
+                            input.form-control(name='firstname' placeholder="Search..")
+                        div.col-md-4
+                            input.btn.btn-success.btn-block(type="submit")
+                        br
+                        br
+                div.col.form-group.col-md-6
+                    form(method="get" action='/user/customerhome')
+                        button.btn.btn-primary.btn-block(type="submit") Add new  
+        h3 Your list of customers 
+        table.table
+            thead.thead-dark
+                tr
+                    th firstname
+                    th phonecontact
+                    th downpayment
+            tbody
+                each user in users
+                    tr
+                        td #{user.firstname}
+                        td #{user.phonecontact}
+                        td #{user.downpay}
+                        td
+                         form(action="/user/customerhome/delete", method="post")
+                                input(type="hidden", placeholder="", name="id", value= user._id)
+                                button.btn.btn-dark.btn-block(type="submit") Delete 
+        footer.page-footer.font-small.special-color-dark.pt-4
+        .footer-copyright.text-center.py-3
+            | Bodaboda &copy; 2020 Copyright
