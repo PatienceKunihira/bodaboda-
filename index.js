@@ -32,16 +32,29 @@ server.set('views', __dirname + '/views')
 server.use('/', loginRoutes);
 server.use('/user',userRoutes);
 
-mongoose.connect(
-  "mongodb://localhost:27017/bodaboda",
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  function(err) {
-    if (err) throw err;
-    console.log("Successfully connected to dbase");
-  });
+// mongoose.connect(
+//   "mongodb://localhost:27017/bodaboda",
+//   { useNewUrlParser: true, useUnifiedTopology: true },
+//   function(err) {
+//     if (err) throw err;
+//     console.log("Successfully connected to dbase");
+//   });
 
+  const uri =
+    "mongodb+srv://PatienceK:@xVJ6PGcQmaTpB5@cluster0.6xrvf.mongodb.net/<bodabanja>?retryWrites=true&w=majority";
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("MongoDB Connected…");
+  })
+    .catch((err) => console.log(err));
 
-  server.post('/', (req, res) => {
+    
+
+server.post('/', (req, res) => {
     if (req.session) {
         req.session.destroy(function (err) {
             if (err) {
