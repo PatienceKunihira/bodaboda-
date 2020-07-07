@@ -9,6 +9,7 @@ const path = require("path");
 const passport = require('passport');
 
 const server = express();
+var PORT = process.env.PORT || 2001;
 
 
 server.use(bodyParser.json());
@@ -65,7 +66,7 @@ server.post('/', (req, res) => {
     }  
   }) 
 
-  server.listen(2001, () => {
+  server.listen(PORT, () => {
     console.log("listening on 2001");
   });
 
