@@ -30,7 +30,7 @@ server.set('view engine','pug')
 server.set('views', __dirname + '/views')
 
 
-server.use('/', loginRoutes);
+server.use('/login', loginRoutes);
 server.use('/user',userRoutes);
 
 // mongoose.connect(

@@ -6,12 +6,12 @@ const passport = require('passport');
 const path = require('path');
 
 
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "../views", "/login.html"));
 });
 
-router.post('/login',
-  passport.authenticate('local', {failureRedirect: '/login'}),(req, res)=>{
+router.post('/',
+  passport.authenticate('local', {failureRedirect: '/'}),(req, res)=>{
       req.session.user = req.user;
       const role = permissions[req.user.role]
       res.redirect(role.homepage+'?userid=' +req.user.id);
